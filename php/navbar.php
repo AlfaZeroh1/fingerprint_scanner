@@ -29,9 +29,9 @@ if(count($_SESSION)>0){
             <?php
                 if($loggedin){
             ?>
-                    <div class="nav_link" onclick="window.location.href='units.php'">
+                    <div class="nav_link" onclick="window.location.href='courses.php'">
                         <img src="../images/png/book.png">
-                        <a href="edit.php">My units</a>
+                        <a href="edit.php">My courses</a>
                     </div>
             <?php
                 }
