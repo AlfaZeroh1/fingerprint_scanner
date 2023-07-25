@@ -6,16 +6,17 @@ $password = "#@Alphaxard1";
 $databases_we_are_using = "mark";
 
 try {
-    $dbh = new PDO("mysql:host=$server_name;dbname=$databases_we_are_using", $mysql_user, $password);
+    $connection = new PDO("mysql:host=$server_name;dbname=$databases_we_are_using", $mysql_user, $password);
 
     // Set PDO error mode to exception
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // You are now connected to the database!
-    echo "Connected successfully!";
+    // echo "<br>Connected successfully!<br>";
 } catch (PDOException $e) {
     // If there is an error, handle it here
     echo "Connection failed: " . $e->getMessage();
+    die();
 }
 
 ?>

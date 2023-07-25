@@ -11,10 +11,11 @@
     font-family: 'Courier New', Courier, monospace;
     color: var(--pri);
     background-color: var(--sec);
+    background: red;
 }
 img{
-    /* color: var(--pri); */
-    /* background-color: #aaa; */
+    filter: invert(100%);
+    background: red;
 }
 .cont{
     position: absolute;

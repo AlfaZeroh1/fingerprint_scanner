@@ -5,7 +5,6 @@
 // **************************************************************************************
 // for it to work, we first connect to db
 include "../DB.php";
-
 // **************************************************************************************
 
 // These are the statements you'll use to crud the DB
@@ -15,12 +14,12 @@ $query = "SELECT * FROM users";
 // Ther are two ways to prepare and execute statements
     // method 1
         // THEN we Prepare the SQL statement
-        $stmt = $dbh->prepare($query);
+        $stmt = $connection->prepare($query);
         // Then we execute the query like so
         // Execute the prepared statement
         $stmt->execute();
     // method 2
-    $stmt = $dbh->query($sql);
+    $stmt = $connection->query($query);
 // IF the query returns something like in a SELECT statement, 
 // you can fetch it and store it in an associative array using this
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -30,5 +29,9 @@ $query = "SELECT * FROM users";
         print_r($row);
         echo "<br><br>";
     }
+    CREate - INsert into
+    Read - select
+    Update - ..
+    Delete - ..
 
 // **************************************************************************************

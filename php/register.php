@@ -1,11 +1,32 @@
 <?php
 if($_POST['action']=='register'){
+    // die(print_r($_POST));
+    // Connect to DB
+    include "../DB.php";
     // print_r($_POST);
+    // Query for perfoming a creat Operation
     $query = "INSERT INTO users(username,password,role) VALUES('".$_POST['username']."','".$_POST['password']."','student')";
-
-
+    // Execute the query
+    if($connection->query($query)){
+        // New User created
+        // Create a new session for user
+        session_start();
+        $_SESSION['userid'] = $connection->lastInsertId();
+        // Now we create a new student
+        $query = "INSERT INTO students(firstname,lastname,regno,fingerprint,userid) VALUES('".$_POST['username']."','".$_POST['lastname']."','".$_POST['regno']."','".$_POST['fingerprint']."','".$connection->lastInsertId()."')";
+        if($connection->query($query)){
+            // New Student Created
+            // echo "<script>alert('')</script>";
+            echo "<script>alert('Welcome Aboard, ".$_POST['username']."'); window.location.href='attendance.php'</script>";
+        }
+        else{
+            echo "<script>alert('Error! Failed to register you as a student. Contact admin for further assistance');window.location.href='attendance.php';</script>";
+        }
+    }
+    else{
+        echo "<script>alert('Error! Failed to create  new User')</script>";
+    }
 }
-
 ?>
 <html>
     <head>
