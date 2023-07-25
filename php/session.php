@@ -5,8 +5,5 @@ session_start();
 if(empty($_SESSION['userid'])){
     header("Location: logout.php");
 }
-// else{print_r($_SESSION);}
-// continue with your current page
-
 
  ?>
