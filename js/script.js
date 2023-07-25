@@ -9,12 +9,14 @@ function toggle_darkmode(){
         // Modify the CSS variables
         root.setProperty('--pri', '#fff');
         root.setProperty('--sec', '#000');
+        root.setProperty('--inv', '100%');
         // alert(priColor+'if')
     }
     else{
         // Modify the CSS variables
         root.setProperty('--pri', '#000');
         root.setProperty('--sec', '#fff');
+        root.setProperty('--inv', '0%');
         // alert(priColor+'else')
         
 

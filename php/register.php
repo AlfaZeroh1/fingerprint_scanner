@@ -12,6 +12,7 @@ if($_POST['action']=='register'){
         // Create a new session for user
         session_start();
         $_SESSION['userid'] = $connection->lastInsertId();
+        $_SESSION['username'] = $_POST['username'];
         // Now we create a new student
         $query = "INSERT INTO students(firstname,lastname,regno,fingerprint,userid) VALUES('".$_POST['username']."','".$_POST['lastname']."','".$_POST['regno']."','".$_POST['fingerprint']."','".$connection->lastInsertId()."')";
         if($connection->query($query)){
