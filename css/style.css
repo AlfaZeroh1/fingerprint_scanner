@@ -59,7 +59,6 @@ img{
     background-color: var(--sec);
     color: var(--pri);
     cursor: pointer;
-
 }
 .links{
     display: flex;
@@ -110,4 +109,35 @@ img{
 .title:hover{
     cursor: pointer;
     transform: scale(1.01);
+}
+.cont table{
+    width: 100%;
+    border: 1px solid var(--pri);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 3%;
+}
+.cont table th, .cont table td{
+    border-bottom: 1px solid var(--pri);
+    border-right: 1px solid var(--pri);
+    padding: 10px;
+}
+.cont table td select, .cont table td input, .cont table td button, .cont table td span{
+    font-size: 1.2rem;
+    padding: 5px;
+
+}
+.cont table td button, .cont table td input[type='submit']{
+    background-color: var(--pri);
+    color: var(--sec);
+    border-radius: 20px;
+    padding: 5px;
+}
+.cont table td button:hover, .cont table td input[type='submit']:hover{
+    border: 1px solid var(--pri);
+    background-color: var(--sec);
+    color: var(--pri);
+    cursor: pointer;
 }

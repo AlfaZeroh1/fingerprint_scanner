@@ -31,7 +31,7 @@ if(count($_SESSION)>0){
             ?>
                     <div class="nav_link" onclick="window.location.href='courses.php'">
                         <img src="../images/png/book.png">
-                        <a href="edit.php">My courses</a>
+                        <a href="courses.php">My courses</a>
                     </div>
             <?php
                 }
