@@ -35,6 +35,8 @@ if($_POST['action']=='register'){
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
+        <?php include "navbar.php"; ?>
+
         <div class="cont">
             <form method="post">
                 <div class="ipt">
@@ -81,5 +83,7 @@ if($_POST['action']=='register'){
                 <!-- <div class="links"></div> -->
             </form>
         </div>
+
+        <script src="../js/script.js"></script>
     </body>
 </html>

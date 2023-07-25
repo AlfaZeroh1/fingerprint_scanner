@@ -107,3 +107,7 @@ img{
     width: 20%;
     margin-bottom: 5px;
 }
+.title:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+}
