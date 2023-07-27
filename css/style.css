@@ -37,8 +37,9 @@ img{
 }
 .ipt input{
     height: 1.5rem;
-    border: 1px solid var(--pri);
-    border-radius: 30px;
+    border: none;
+    border-bottom: 1px solid var(--pri);
+    /* border-radius: 30px; */
     padding-left: 10px;
 }
 .submit{
