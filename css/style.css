@@ -24,7 +24,7 @@ img{
     top: 50%;
     width: 20vw;
     height: auto;
-    padding: 100px;
+    padding: 20px 100px 30px 100px;
     border: 1px solid var(--pri);
     transform: translate(-50%,-50%);
 }
@@ -33,7 +33,7 @@ img{
     flex-direction: column;
 }
 .ipt label{
-    margin: 15px 0px 5px 0px;
+    margin: 15px 0px 2px 0px;
 }
 .ipt input{
     height: 1.5rem;
