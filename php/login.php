@@ -5,7 +5,6 @@ if($_POST['action']=='login'){
     include "../DB.php";
     // Verify Authentication
     $query = "SELECT * FROM users WHERE username='".$_POST['username']."' AND password='".$_POST['password']."' and role='student' ";
-    echo $query;
     $execution = $connection->query($query);
     $results = $execution->fetchAll(PDO::FETCH_ASSOC);
 
@@ -17,6 +16,7 @@ if($_POST['action']=='login'){
         $_SESSION['userid'] = $results[0]['id'];
         $_SESSION['username'] = $results[0]['username'];
         $_SESSION['userid']."'";
+        
         $sql = "SELECT * FROM students WHERE userid = '".$_SESSION['userid']."' ";
         $execution = $connection->query($sql);
         $results = $execution->fetchAll(PDO::FETCH_ASSOC);
