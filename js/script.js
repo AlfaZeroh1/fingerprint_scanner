@@ -23,3 +23,17 @@ function toggle_darkmode(){
     }
 
 }
+let fingerprint = document.querySelector(".fingerprint-value");
+function generatCode(event) {
+  const chars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  let code = "";
+  for (let index = 0; index < 10; index++) {
+    let randomIndex = Math.floor(Math.random() * chars.length);
+    // console.log(randomIndex)
+    code += chars.charAt(randomIndex);
+  }
+  fingerprint.value = code;
+  console.log(fingerprint);
+}
