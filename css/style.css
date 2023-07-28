@@ -82,11 +82,6 @@ img{
     justify-content: space-between;
     text-align: center;
 }
-.user_name{
-    font-size: 2rem;
-    font-weight: 700;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 .user_unit{
     font-size: 1.5rem;
     font-weight: 600;
@@ -106,10 +101,6 @@ img{
     margin-left: 40%;
     width: 20%;
     margin-bottom: 5px;
-}
-.title:hover{
-    cursor: pointer;
-    transform: scale(1.01);
 }
 .cont table{
     width: 100%;

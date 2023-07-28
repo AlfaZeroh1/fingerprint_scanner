@@ -6,11 +6,23 @@ if(count($_SESSION)>0){
 }
 ?>
 <div class="navbar">
+
+    
             <?php
                 if($loggedin){
             ?>
                     <div class="title" onclick="window.location.href='attendance.php'">
-                        <span class="user_name" >Welcome, <?php echo $_SESSION['username'];?></span>
+                        <div class="user_name" style="font-size:20px;">Welcome, <?php echo $_SESSION['username'];?></div>
+                    </div>
+            <?php
+                }
+            ?>
+            <?php
+                if($loggedin){
+            ?>
+                    <div class="nav_link" onclick="window.location.href='attendance.php'">
+                        <img src="../images/png/home.png">
+                        <a href="attendance.php" >Home</a>
                     </div>
             <?php
                 }
