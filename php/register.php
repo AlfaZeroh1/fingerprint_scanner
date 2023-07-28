@@ -18,6 +18,7 @@ if($_POST['action']=='register'){
         if($connection->query($query)){
             // New Student Created
             // echo "<script>alert('')</script>";
+            $_SESSION['studentid'] = $connection->lastInsertId();
             echo "<script>alert('Welcome Aboard, ".$_POST['username']."'); window.location.href='attendance.php'</script>";
         }
         else{
