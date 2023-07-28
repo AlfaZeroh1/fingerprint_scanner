@@ -16,6 +16,8 @@ if($_POST['action']=='login'){
         $_SESSION['userid'] = $results[0]['id'];
         $_SESSION['username'] = $results[0]['username'];
         $_SESSION['userid']."'";
+        
+        $sql = "SELECT * FROM students WHERE userid = '".$_SESSION['userid']."' ";
         $execution = $connection->query($sql);
         $results = $execution->fetchAll(PDO::FETCH_ASSOC);
         
