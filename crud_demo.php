@@ -29,9 +29,6 @@ $query = "SELECT * FROM users";
         print_r($row);
         echo "<br><br>";
     }
-    CREate - INsert into
-    Read - select
-    Update - ..
-    Delete - ..
+    
 
 // **************************************************************************************

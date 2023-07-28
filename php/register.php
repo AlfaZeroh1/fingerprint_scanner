@@ -60,9 +60,9 @@ if($_POST['action']=='register'){
                     <input type="text" name="username" id="username">
                 </div>
 
-                <div class="ipt">
+                <div class="submit">
                     <label>Scan Fingerprint</label>
-                    <input type="text" name="fingerprint" id="fingerprint">
+                    <input type="submit" name="action" id="fingerprint">
                 </div>
 
                 <div class="ipt">
