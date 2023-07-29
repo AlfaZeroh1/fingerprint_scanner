@@ -1,13 +1,31 @@
-<?php include "index.php"; ?>
+<?php
+include "index.php"; 
+include "../DB.php";
+?>
+
+<!-- Admin Login logic -->
+<?php
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    if ($username == 'Admin' && $password == "a") {
+        session_start();
+        $_SESSION['admin'] = $username;
+        $_SESSION['password'] = $password;
+        $filePath = "admin_home.php";
+        header("Location: $filePath");
+        exit();
+    }
+?>
+
+<!-- Users Login Logic -->
 <?php
 if($_POST['action']=='login'){
-    // connect to DB
-    include "../DB.php";
     // Verify Authentication
     $query = "SELECT * FROM users WHERE username='".$_POST['username']."' AND password='".$_POST['password']."' and role='student' ";
+    echo "Users Login Logic called.";
     $execution = $connection->query($query);
     $results = $execution->fetchAll(PDO::FETCH_ASSOC);
-
+    
     if(count($results) > 0){
         // print_r($results);
         // die();

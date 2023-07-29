@@ -1,9 +1,9 @@
 <?php
 // These are the credentials you'll use to connect to your database
 $server_name = "localhost";
-$mysql_user = "wise";
-$password = "#@Alphaxard1";
-$databases_we_are_using = "mark";
+$mysql_user = "alvin";
+$password = "1#GranTurismo";
+$databases_we_are_using = "Login_form";
 
 try {
     $connection = new PDO("mysql:host=$server_name;dbname=$databases_we_are_using", $mysql_user, $password);

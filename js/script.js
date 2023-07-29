@@ -21,5 +21,21 @@ function toggle_darkmode(){
         
 
     }
-
 }
+
+
+var editBtns = document.querySelectorAll('#adminEditBtn')
+editBtns.forEach(editBtn => {
+    editBtn.addEventListener('click', function() {
+        var rowId = this.getAttribute('data_id');
+        console.log("Row clicked = " + rowId);
+    })
+});
+
+var deleteBtns = document.querySelectorAll('#adminDeleteBtn')
+deleteBtns.forEach(deleteBtn => {
+    deleteBtn.addEventListener('click', function() {
+        var rowId = this.getAttribute('data_id');
+        console.log('Delete button ' + rowId);
+    })
+});

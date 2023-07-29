@@ -18,6 +18,16 @@ if(count($_SESSION)>0){
             <?php
                 if($loggedin){
             ?>
+                    <div class="nav_link" onclick="window.location.href='attendance.php'">
+                        <img src="../images/png/home.png">
+                        <a href="attendance.php" >Home</a>
+                    </div>
+            <?php
+                }
+            ?>
+            <?php
+                if($loggedin){
+            ?>
                     <div class="nav_link" onclick="window.location.href='edit.php'">
                         <img src="../images/png/profile.png">
                         <a href="edit.php" >My Profile</a>
