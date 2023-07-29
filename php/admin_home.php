@@ -13,13 +13,11 @@
         include "admin_navbar.php";
         include "../DB.php";
         
-        $table = "Credentials";
-        $_SESSION['tableName'] = $table;
     ?>
     <div class="admin_table_section">
-        <div class="admin_table_div">
+        <form method="post" action="adminSelectedTable.php" class="admin_table_div">
             <label >Choose table to view:</label>
-            <select name="" id="">
+            <select name="selected_table" id="selected_table">
                 <?php
                 
                 try {
@@ -35,15 +33,15 @@
                 }
                 ?>
             </select>
-        </div>
-        <button>Click Me</button>
+            <button type="submit" name="selectTable">Show Table</button>
+        </form>
     </div>
     <div id="table_area">
         <table border:= 1; id="table">
             <thead>
                 <tr>
                     <?php
-                    $retrieveTitles = "DESC $table";
+                    $retrieveTitles = "DESC ".$_SESSION['selectedTable']." ";
                     $titleResults = $connection->query($retrieveTitles);
                     $titles = $titleResults->fetchAll(PDO::FETCH_COLUMN);
                     foreach($titles as $title) {
@@ -57,7 +55,7 @@
                     ?>
                 </tr>
                     <?php
-                    $retrieveAllData = "SELECT * FROM $table";
+                    $retrieveAllData = "SELECT * FROM ".$_SESSION['selectedTable']." ";
                     $dataResults = $connection->query($retrieveAllData);
                     $dataObj = $dataResults->fetchAll(PDO::FETCH_OBJ);
 

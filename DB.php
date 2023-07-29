@@ -3,7 +3,7 @@
 $server_name = "localhost";
 $mysql_user = "alvin";
 $password = "1#GranTurismo";
-$databases_we_are_using = "Login_form";
+$databases_we_are_using = "sql_invoicing";
 
 try {
     $connection = new PDO("mysql:host=$server_name;dbname=$databases_we_are_using", $mysql_user, $password);
