@@ -163,10 +163,14 @@ img{
     align-items: center;
 }
 #table_area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: fit-content;
+    margin-top: 20px;
 }
 #table {
-    width: 100%;
+    width: 95%;
     background: var(--pri);
     border: solid 2px var(--pri);
 }
@@ -176,6 +180,11 @@ img{
 }
 #tableData {
     padding-left: 10px;
+}
+#addRecordBtn {
+    height: 50px;
+    width: 100px;
+    margin: 20px;
 }
 #adminEdit {
     height: inherit;
