@@ -28,6 +28,7 @@ $query = "SELECT * FROM users";
     foreach ($results as $row) {
         print_r($row);
         echo "<br><br>";
+        echo "<br><br>";
     }
     
 
