@@ -51,6 +51,17 @@ if(count($_SESSION)>0){
             <?php
                 if($loggedin){
             ?>
+                    <div class="nav_link" onclick="window.location.href='view_attendance.php'">
+                        <img src="../images/png/book.png">
+                        <a href="view_attendance.php">My Attendance</a>
+                    </div>
+            <?php
+                }
+            ?>
+
+            <?php
+                if($loggedin){
+            ?>
                     <div class="nav_link" onclick="window.location.href='logout.php'">
                         <img src="../images/png/logout(1).png">
                         <a href="logout.php">Logout</a>
