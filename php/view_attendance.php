@@ -17,8 +17,7 @@ include "../DB.php";
                         <label>Choose Unit</label>
                         <select name="selectedCourse" id="course">
                             <option selected disabled>Choose a Course</option>
-                            <?php   
-
+                            <?php
                                 $query = "SELECT c.id,c.coursename FROM user_courses uc LEFT JOIN courses c ON uc.courseid = c.id WHERE userid='".$_SESSION['userid']."' ";
                                 // $query ="SELECT courses.coursename, attendance.signed_in, attendance.signed_out FROM courses LEFT JOIN attendance ON courses.id = attendance.courseid GROUP";
                                 $execution = $connection->query($query);
