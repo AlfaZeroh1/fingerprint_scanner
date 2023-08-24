@@ -7,7 +7,7 @@ include "../DB.php";
 <?php
     $username = $_POST['username'];
     $password = $_POST['password'];
-    if ($username == 'Admin' && $password == "a") {
+    if ($username == 'admin' && $password == "admin") {
         session_start();
         $_SESSION['admin'] = $username;
         $_SESSION['password'] = $password;
