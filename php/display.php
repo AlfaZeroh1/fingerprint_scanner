@@ -22,32 +22,31 @@ session_start();
                 <?php
 
                 if ($_SERVER['REQUEST_METHOD']=='POST') {
-                    $command = "desc viewAttendance";
-                    $titleResult = $connection->query($command);
-                    $titleObjs = $titleResult->fetchAll(PDO::FETCH_OBJ);
+                    echo "
+                        <tr>
+                            <th>#</th>
+                            <th>Course</th>
+                            <th>Signed In</th>
+                            <th>Signed Out</th>
+                        </tr>
+                    ";
 
-                    foreach($titleObjs as $obj) {
-                        echo "<th>$obj->Field</th>";
-                    }
-
-                    $query2 = "SELECT c.coursename, a.signed_in, a.signed_out 
-                    FROM courses c 
-                    LEFT JOIN attendance a ON c.id = a.courseid
-                    WHERE c.id = '".$_POST['selectedCourse']."'";
+                    $query2 = "SELECT c.coursename, a.signed_in, a.signed_out FROM attendance a LEFT JOIN courses c ON c.id = a.courseid WHERE a.courseid = '".$_POST['selectedCourse']."' AND a.studentid=(SELECT id from students WHERE userid = '".$_SESSION['userid']."')";
+                    // die($query2);
 
                     $execution2 = $connection->query($query2);
                     $results2 = $execution2->fetchAll(PDO::FETCH_OBJ);
-                    
+                    $i=1;
                     foreach($results2 as $data) {
-                        
-                        echo "
-                            <tr>";
+                        echo "<tr>";
+                            echo "<td>$i</td>";
                             foreach ($data as $key => $value) {
                                 echo "<td>$value</td>";
                             }
-                        "</tr>";
+                            $i++;
+                        echo "</tr>";
                     }
-                    }
+                }
                 
                 ?>
             </table>
