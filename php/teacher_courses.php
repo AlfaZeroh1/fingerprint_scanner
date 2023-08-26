@@ -1,4 +1,4 @@
-<?php include "session.php"; include "../DB.php";?>
+<?php include "teacher_session.php"; include "../DB.php";?>
 <?php
 include "../index.php"; 
 if($_POST['action']=="add course"){

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../index.php"; 
+include "session.php"; 
 $loggedin = false;
 if (count($_SESSION) > 0) {
     $loggedin = true;
