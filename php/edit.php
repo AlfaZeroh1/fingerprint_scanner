@@ -1,4 +1,6 @@
-<?php include "session.php"; include "../DB.php";?>
+<?php 
+include "../index.php"; 
+include "session.php"; include "../DB.php";?>
 <html>
     <head>
         <title>Register New Student</title>

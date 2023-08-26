@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "../index.php"; 
 if (isset($_POST['selectTable'])) {
     echo "Table called";
     if (isset($_POST["selected_table"]) && !empty($_POST["selected_table"])) {

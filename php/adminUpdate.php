@@ -2,6 +2,7 @@
 <form action='adminEditRow.php' method="post" class="cont">
     <?php
     session_start();
+    include "../index.php"; 
     include "../DB.php";
 
     error_reporting(E_ALL);

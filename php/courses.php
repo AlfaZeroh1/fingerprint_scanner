@@ -1,5 +1,6 @@
 <?php include "session.php"; include "../DB.php";?>
 <?php
+    include "../index.php"; 
     if($_POST['action']=="add course"){
         // Add Course to User
         $query = "INSERT INTO user_courses(userid,courseid) VALUES('".$_SESSION['userid']."','".$_POST['course']."')";
