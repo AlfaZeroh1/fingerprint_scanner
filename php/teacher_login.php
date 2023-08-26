@@ -1,4 +1,3 @@
-<?php include "session.php"; ?>
 <?php
 if ($_POST['action'] == 'login') {
     // connect to DB
