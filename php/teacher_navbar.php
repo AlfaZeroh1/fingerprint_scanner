@@ -25,7 +25,26 @@ if (count($_SESSION) > 0) {
     <?php
     }
     ?>
-
+    <?php
+        if($loggedin){
+    ?>
+            <div class="nav_link" onclick="window.location.href='teacher_students.php'">
+                <img src="../images/png/students.png">
+                <a href="teacher_students.php" >My Students</a>
+            </div>
+    <?php
+        }
+    ?>
+    <?php
+        if($loggedin){
+    ?>
+            <div class="nav_link" onclick="window.location.href='teacher_view_attendance.php'">
+                <img src="../images/png/book.png">
+                <a href="teacher_view_attendance.php" >Attendance</a>
+            </div>
+    <?php
+        }
+    ?>
     <?php
     if ($loggedin) {
     ?>
