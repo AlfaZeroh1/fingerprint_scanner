@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "../index.php"; 
 include "../DB.php";
 if (isset($_POST['row_id'])) {
     $rowId = $_POST['row_id'];

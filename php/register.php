@@ -1,4 +1,5 @@
 <?php
+include "../index.php"; 
 if($_POST['action']=='register'){
     // die(print_r($_POST));
     // Connect to DB

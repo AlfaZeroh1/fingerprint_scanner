@@ -1,4 +1,5 @@
 <?php
+include "../index.php"; 
 session_start();
 $loggedin = false;
 if(count($_SESSION)>0){

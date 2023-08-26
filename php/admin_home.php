@@ -12,6 +12,7 @@
     <?php
         session_start();
         include "admin_navbar.php";
+        include "../index.php"; 
         include "../DB.php";
         
     ?>
