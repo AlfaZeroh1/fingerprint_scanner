@@ -1,6 +1,5 @@
 <?php
 session_start();
-include "session.php"; 
 $loggedin = false;
 if (count($_SESSION) > 0) {
     $loggedin = true;
@@ -37,7 +36,7 @@ if (count($_SESSION) > 0) {
         }
     ?>
     <?php
-        if($loggedin){
+        if($loggedin && 1!=1){
     ?>
             <div class="nav_link" onclick="window.location.href='teacher_view_attendance.php'">
                 <img src="../images/png/book.png">
