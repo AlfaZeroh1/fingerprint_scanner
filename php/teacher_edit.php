@@ -1,4 +1,4 @@
-<?php include "session.php";
+<?php include "teacher_session.php";
 include "../DB.php";
 session_start();
 if ($_POST['action'] == 'edit') {

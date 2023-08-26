@@ -1,5 +1,4 @@
-<?php include "session.php";
-include "../index.php"; 
+<?php include "teacher_session.php";
 include "../DB.php"; ?>
 <?php
 session_start();

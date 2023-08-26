@@ -1,7 +1,6 @@
 <?php include "session.php"; include "../DB.php";?>
 <?php
 session_start();
-include "../index.php"; 
 if ($_POST['action'] == 'Mark Attendance') {
     $sql = "INSERT INTO attendance(signed_in,signed_out,studentid,courseid)VALUES(NOW(),NOW(),'" . $_SESSION['studentid'] . "','" . $_POST['course'] . "')";
     $execution = $connection->query($sql);

@@ -1,4 +1,5 @@
 <?php
+include "session.php"; 
 include "../DB.php";
 
 $query = "DELETE FROM user_courses WHERE id='".$_POST['linkid']."'";
