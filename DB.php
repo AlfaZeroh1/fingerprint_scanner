@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 0); error_reporting(E_ERROR | E_WARNING | E_PARSE); 
 // These are the credentials you'll use to connect to your database
 $server_name = "localhost";
 $mysql_user = "alpha";
