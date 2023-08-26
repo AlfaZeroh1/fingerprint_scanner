@@ -29,7 +29,7 @@ if ($_POST['action'] == 'login') {
 </head>
 
 <body>
-    <?php include "teacher_navbar.php"; ?>
+    <?php //include "teacher_navbar.php"; ?>
     <div class="cont">
         <form method="post">
             <div class="ipt">
